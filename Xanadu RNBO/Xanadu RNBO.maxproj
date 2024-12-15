@@ -2,7 +2,7 @@
 	"name" : "Xanadu RNBO",
 	"version" : 1,
 	"creationdate" : 3817114062,
-	"modificationdate" : 3817114110,
+	"modificationdate" : 3817119262,
 	"viewrect" : [ 50.0, 144.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -15,36 +15,16 @@
 				"local" : 1,
 				"toplevel" : 1
 			}
+,
+			"osc_sender.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
 
 		}
 ,
 		"media" : 		{
-			"aulos.mp3" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
 			"seistron.mp3" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"sfx-claybell.mp3" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"sfx-knock.mp3" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"vocoder.mp3" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"xanadu.mp3" : 			{
 				"kind" : "audiofile",
 				"local" : 1
 			}

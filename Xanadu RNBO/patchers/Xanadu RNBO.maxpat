@@ -2153,11 +2153,23 @@
 						}
 ,
 						"classnamespace" : "rnbo",
-						"rect" : [ 5813.0, 62.0, 1204.0, 1596.0 ],
+						"rect" : [ 5111.0, 62.0, 1906.0, 1589.0 ],
 						"default_fontname" : "Lato",
 						"gridsize" : [ 15.0, 15.0 ],
 						"title" : "xanadu",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-130",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1314.0, 283.0, 150.0, 35.0 ],
+									"text" : "sound playback controlled by audio"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-82",
 									"maxclass" : "newobj",
@@ -8169,7 +8181,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 1250.0, 839.0, 24.0, 24.0 ],
+									"patching_rect" : [ 1131.0, 840.0, 24.0, 24.0 ],
 									"rnbo_classname" : "button",
 									"rnbo_serial" : 3,
 									"rnbo_uniqueid" : "button_obj-174"
@@ -8184,7 +8196,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 1279.0, 839.0, 24.0, 24.0 ],
+									"patching_rect" : [ 1160.0, 840.0, 24.0, 24.0 ],
 									"rnbo_classname" : "button",
 									"rnbo_serial" : 4,
 									"rnbo_uniqueid" : "button_obj-175"
@@ -8198,7 +8210,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1266.0, 900.0, 50.0, 23.0 ],
+									"patching_rect" : [ 1147.0, 901.0, 50.0, 23.0 ],
 									"rnbo_classname" : "set",
 									"rnbo_serial" : 6,
 									"rnbo_uniqueid" : "set_obj-176",
@@ -8255,7 +8267,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 1263.0, 784.0, 43.0, 23.0 ],
+									"patching_rect" : [ 1144.0, 785.0, 43.0, 23.0 ],
 									"rnbo_classname" : "sel",
 									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "sel_obj-177",
@@ -8403,7 +8415,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 1268.0, 745.0, 46.0, 23.0 ],
+									"patching_rect" : [ 1149.0, 746.0, 46.0, 23.0 ],
 									"rnbo_classname" : "change",
 									"rnbo_extra_attributes" : 									{
 										"mode" : "default"
@@ -8423,7 +8435,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 1273.0, 693.0, 24.0, 24.0 ],
+									"patching_rect" : [ 1154.0, 694.0, 24.0, 24.0 ],
 									"rnbo_classname" : "toggle",
 									"rnbo_extra_attributes" : 									{
 										"preset" : 0,
@@ -15010,7 +15022,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1268.0, 592.0, 75.0, 23.0 ],
+									"patching_rect" : [ 1149.0, 593.0, 75.0, 23.0 ],
 									"rnbo_classname" : "inport",
 									"rnbo_extra_attributes" : 									{
 										"meta" : ""
@@ -15606,7 +15618,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "signal" ],
-									"patching_rect" : [ 1268.0, 1082.0, 124.0, 23.0 ],
+									"patching_rect" : [ 1149.0, 1083.0, 124.0, 23.0 ],
 									"rnbo_classname" : "groove~",
 									"rnbo_extra_attributes" : 									{
 										"syncmode" : "phase",
@@ -15864,7 +15876,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 1344.0, 1136.0, 150.0, 23.0 ],
+									"patching_rect" : [ 1225.0, 1137.0, 150.0, 23.0 ],
 									"rnbo_classname" : "buffer~",
 									"rnbo_extra_attributes" : 									{
 										"fill" : "",
@@ -22798,7 +22810,7 @@
 							}
 ,
 							"vo_atten" : 							{
-								"value" : 0.000408290911919
+								"value" : 0.0
 							}
 ,
 							"pb2_rate" : 							{
@@ -22897,7 +22909,7 @@
 										}
 ,
 										"vo_atten" : 										{
-											"value" : 0.000408290911919
+											"value" : 0.0
 										}
 ,
 										"pb2_rate" : 										{

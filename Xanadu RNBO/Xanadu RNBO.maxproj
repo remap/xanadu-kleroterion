@@ -2,8 +2,8 @@
 	"name" : "Xanadu RNBO",
 	"version" : 1,
 	"creationdate" : 3817114062,
-	"modificationdate" : 3817119262,
-	"viewrect" : [ 50.0, 144.0, 300.0, 500.0 ],
+	"modificationdate" : 3817143613,
+	"viewrect" : [ 52.0, 144.0, 298.0, 501.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -20,12 +20,9 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
-
-		}
 ,
-		"media" : 		{
-			"seistron.mp3" : 			{
-				"kind" : "audiofile",
+			"vocoder-testing.maxpat" : 			{
+				"kind" : "patcher",
 				"local" : 1
 			}
 

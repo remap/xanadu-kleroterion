@@ -256,8 +256,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 75.0, 242.0, 242.0, 22.0 ],
-					"text" : "prepend /xanadu/kl/default/entity/rnbo/event"
+					"patching_rect" : [ 75.0, 242.0, 263.0, 22.0 ],
+					"text" : "prepend /{{instance}}/kl/default/entity/rnbo/event"
 				}
 
 			}
@@ -280,8 +280,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 55.0, 346.0, 309.0, 22.0 ],
-					"text" : "/xanadu/kl/default/entity/rnbo/event message pb1_play 0"
+					"patching_rect" : [ 55.0, 346.0, 330.0, 22.0 ],
+					"text" : "/{{instance}}/kl/default/entity/rnbo/event message pb1_play 0"
 				}
 
 			}
@@ -292,8 +292,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 55.0, 318.0, 309.0, 22.0 ],
-					"text" : "/xanadu/kl/default/entity/rnbo/event message pb1_play 1"
+					"patching_rect" : [ 55.0, 318.0, 330.0, 22.0 ],
+					"text" : "/{{instance}}/kl/default/entity/rnbo/event message pb1_play 1"
 				}
 
 			}
@@ -450,7 +450,7 @@
 
 			}
  ],
-		"originid" : "pat-155",
+		"originid" : "pat-144",
 		"parameters" : 		{
 			"obj-20" : [ "live.menu", "live.menu", 0 ],
 			"obj-27" : [ "live.menu[1]", "live.menu", 0 ],

@@ -1,0 +1,154 @@
+[
+    {
+        "id": "au",
+        "file": "/xanadu/assets/aulos-nqnofzlo71.mp3"
+    },
+    {
+        "id": "au_0",
+        "file": "/xanadu/assets/aulos_0-9ivq69f09h.mp3"
+    },
+    {
+        "id": "au_1",
+        "file": "/xanadu/assets/aulos_0-9ivq69f09h.mp3"
+    },
+    {
+        "id": "pb1_0",
+        "file": "/xanadu/assets/xanadu-v5nhlj4671.mp3"
+    },
+    {
+        "id": "pb1_1",
+        "file": "/xanadu/assets/magic-ycapnma032.mp3"
+    },
+    {
+        "id": "pb1_2",
+        "file": "/xanadu/assets/suddenly-v843lj6o18.mp3"
+    },
+    {
+        "id": "pb1_3",
+        "file": "/xanadu/assets/world-3jze23fuap.mp3"
+    },
+    {
+        "id": "pb1_4",
+        "file": "/xanadu/assets/dancin-l426el3cm3.mp3"
+    },
+    {
+        "id": "pb1_5",
+        "file": "/xanadu/assets/whenever-sthcjgo657.mp3"
+    },
+    {
+        "id": "pb1_6",
+        "file": "/xanadu/assets/suspended-dnz191j6ap.mp3"
+    },
+    {
+        "id": "pb1_7",
+        "file": "/xanadu/assets/alive-9qvx69lo9h.mp3"
+    },
+    {
+        "id": "pb2_0",
+        "file": "/xanadu/assets/sfx-claybell-danu918c71.mp3"
+    },
+    {
+        "id": "pb2_1",
+        "file": "/xanadu/assets/sfx-maraca-1gbhpdc3d9.mp3"
+    },
+    {
+        "id": "pb2_2",
+        "file": "/xanadu/assets/sfx-cowbell-yaxqnm8ca3.mp3"
+    },
+    {
+        "id": "pb2_3",
+        "file": "/xanadu/assets/sfx-ice-lzarelt632.mp3"
+    },
+    {
+        "id": "pb2_4",
+        "file": "/xanadu/assets/sfx-shaker-2vec1epu4a.mp3"
+    },
+    {
+        "id": "pb2_5",
+        "file": "/xanadu/assets/sfx-kartala-yx34nmrix2.mp3"
+    },
+    {
+        "id": "pb2_6",
+        "file": "/xanadu/assets/sfx-beads-qrs1i2mi8k.mp3"
+    },
+    {
+        "id": "pb2_7",
+        "file": "/xanadu/assets/sfx-pipe-bs297nncm5.mp3"
+    },
+    {
+        "id": "pb3_0",
+        "file": "/xanadu/assets/secrets-dqq291lo7y.mp3"
+    },
+    {
+        "id": "pb3_1",
+        "file": "/xanadu/assets/strangers-umzakuicap.mp3"
+    },
+    {
+        "id": "pb3_2",
+        "file": "/xanadu/assets/simpson-q5qai2467y.mp3"
+    },
+    {
+        "id": "pb3_3",
+        "file": "/xanadu/assets/lush-ovqpgopu7y.mp3"
+    },
+    {
+        "id": "pb3_4",
+        "file": "/xanadu/assets/northsea-n4jtfz3c5t.mp3"
+    },
+    {
+        "id": "pb3_5",
+        "file": "/xanadu/assets/chucke-db8591962g.mp3"
+    },
+    {
+        "id": "pb3_6",
+        "file": "/xanadu/assets/sultans-dfcb91ci3o.mp3"
+    },
+    {
+        "id": "pb3_7",
+        "file": "/xanadu/assets/survive-5nr73hj689.mp3"
+    },
+    {
+        "id": "se_0",
+        "file": "/xanadu/assets/seistron-short-ps4phdnc18.mp3"
+    },
+    {
+        "id": "se_1",
+        "file": "/xanadu/assets/sfx-maraca-1gbhpdc3d9.mp3"
+    },
+    {
+        "id": "se_2",
+        "file": "/xanadu/assets/sfx-cowbell-yaxqnm8ca3.mp3"
+    },
+    {
+        "id": "se_3",
+        "file": "/xanadu/assets/sfx-knock-3aqo238c7y.mp3"
+    },
+    {
+        "id": "se_4",
+        "file": "/xanadu/assets/sfx-ice-lzarelt632.mp3"
+    },
+    {
+        "id": "se_5",
+        "file": "/xanadu/assets/sfx-kartala-yx34nmrix2.mp3"
+    },
+    {
+        "id": "se_6",
+        "file": "/xanadu/assets/sfx-beads-qrs1i2mi8k.mp3"
+    },
+    {
+        "id": "se_7",
+        "file": "/xanadu/assets/sfx-pipe-bs297nncm5.mp3"
+    },
+    {
+        "id": "sig_test",
+        "file": "/xanadu/assets/chariots-ymsanmic8k.mp3"
+    },
+    {
+        "id": "vo",
+        "file": "/xanadu/assets/vocoder-p5xshd46a3.mp3"
+    },
+    {
+        "id": "vo_test",
+        "file": "/xanadu/assets/vocoder-test-63ld462i6f.mp3"
+    }
+]

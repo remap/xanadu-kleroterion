@@ -868,7 +868,7 @@
 						}
 ,
 						"classnamespace" : "rnbo",
-						"rect" : [ 5334.0, 133.0, 2247.0, 983.0 ],
+						"rect" : [ -553.0, 100.0, 1554.0, 983.0 ],
 						"default_fontname" : "Lato",
 						"gridsize" : [ 15.0, 15.0 ],
 						"title" : "xanadu",
@@ -30708,14 +30708,14 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "signal" ],
-									"patching_rect" : [ 131.5, 1259.0, 509.0, 23.0 ],
+									"patching_rect" : [ 131.5, 1259.0, 506.0, 23.0 ],
 									"rnbo_classname" : "groove~",
 									"rnbo_extra_attributes" : 									{
 										"syncmode" : "phase",
 										"synctype" : "relative"
 									}
 ,
-									"rnbo_serial" : 13,
+									"rnbo_serial" : 15,
 									"rnbo_uniqueid" : "groove~_obj-65",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -30955,7 +30955,7 @@
 										"changesPatcherIO" : 0
 									}
 ,
-									"text" : "groove~ pb2_0 2 @loop 0 @buffername pb2_0 pb2_1 pb2_2 pb2_3 pb2_4 pb2_5 pb 2_6 pb2_7"
+									"text" : "groove~ pb2_0 2 @loop 0 @buffername pb2_0 pb2_1 pb2_2 pb2_3 pb2_4 pb2_5 pb2_6 pb2_7"
 								}
 
 							}
@@ -38152,11 +38152,11 @@
 							}
 ,
 							"se_buf" : 							{
-								"value" : 4.0
+								"value" : 0.0
 							}
 ,
 							"pb1_buf" : 							{
-								"value" : 4.0
+								"value" : 0.0
 							}
 ,
 							"pb1_end" : 							{
@@ -38180,7 +38180,7 @@
 							}
 ,
 							"pb3_buf" : 							{
-								"value" : 4.0
+								"value" : 0.0
 							}
 ,
 							"pb2_rate" : 							{
@@ -38412,11 +38412,11 @@
 										}
 ,
 										"se_buf" : 										{
-											"value" : 4.0
+											"value" : 0.0
 										}
 ,
 										"pb1_buf" : 										{
-											"value" : 4.0
+											"value" : 0.0
 										}
 ,
 										"pb1_end" : 										{
@@ -38440,7 +38440,7 @@
 										}
 ,
 										"pb3_buf" : 										{
-											"value" : 4.0
+											"value" : 0.0
 										}
 ,
 										"pb2_rate" : 										{

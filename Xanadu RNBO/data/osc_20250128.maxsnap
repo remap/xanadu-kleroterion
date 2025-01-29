@@ -1,0 +1,259 @@
+{
+	"filetype" : "C74Snapshot",
+	"version" : 2,
+	"minorversion" : 0,
+	"name" : "osc",
+	"origin" : "xanadu",
+	"type" : "rnbo",
+	"subtype" : "",
+	"embed" : 1,
+	"snapshot" : 	{
+		"__sps" : 		{
+			"p_obj-275" : 			{
+				"__sps" : 				{
+					"p_obj-43" : 					{
+
+					}
+,
+					"p_obj-5" : 					{
+
+					}
+
+				}
+
+			}
+,
+			"p_obj-253" : 			{
+				"__sps" : 				{
+					"p_obj-43" : 					{
+
+					}
+,
+					"p_obj-5" : 					{
+
+					}
+
+				}
+
+			}
+,
+			"p_obj-371" : 			{
+				"__sps" : 				{
+					"p_obj-43" : 					{
+
+					}
+,
+					"p_obj-5" : 					{
+
+					}
+
+				}
+
+			}
+,
+			"p_obj-297" : 			{
+				"__sps" : 				{
+					"p_obj-43" : 					{
+
+					}
+,
+					"p_obj-5" : 					{
+
+					}
+
+				}
+
+			}
+,
+			"p_obj-242" : 			{
+				"__sps" : 				{
+					"p_obj-43" : 					{
+
+					}
+,
+					"p_obj-5" : 					{
+
+					}
+
+				}
+
+			}
+,
+			"p_obj-264" : 			{
+				"__sps" : 				{
+					"p_obj-43" : 					{
+
+					}
+,
+					"p_obj-5" : 					{
+
+					}
+
+				}
+
+			}
+,
+			"p_obj-381" : 			{
+
+			}
+,
+			"p_obj-405" : 			{
+
+			}
+,
+			"p_obj-286" : 			{
+				"__sps" : 				{
+					"p_obj-43" : 					{
+
+					}
+,
+					"p_obj-5" : 					{
+
+					}
+
+				}
+
+			}
+,
+			"p_obj-308" : 			{
+				"__sps" : 				{
+					"p_obj-43" : 					{
+
+					}
+,
+					"p_obj-5" : 					{
+
+					}
+
+				}
+
+			}
+,
+			"p_obj-387" : 			{
+
+			}
+,
+			"p_obj-211" : 			{
+				"__sps" : 				{
+					"p_obj-43" : 					{
+
+					}
+,
+					"p_obj-5" : 					{
+
+					}
+
+				}
+
+			}
+,
+			"p_obj-413" : 			{
+
+			}
+
+		}
+,
+		"au_mic_sens" : 		{
+			"value" : 1.0
+		}
+,
+		"se_atten" : 		{
+			"value" : 0.25
+		}
+,
+		"au_atten" : 		{
+			"value" : 0.25
+		}
+,
+		"pb1_atten" : 		{
+			"value" : 0.25
+		}
+,
+		"__presetid" : "xanadu",
+		"pb2_atten" : 		{
+			"value" : 2.0
+		}
+,
+		"pb1_loop" : 		{
+			"value" : 0.0
+		}
+,
+		"au_rot_sens" : 		{
+			"value" : 0.0
+		}
+,
+		"pb3_loop" : 		{
+			"value" : 0.0
+		}
+,
+		"se_buf" : 		{
+			"value" : 0.0
+		}
+,
+		"pb1_buf" : 		{
+			"value" : 0.0
+		}
+,
+		"pb1_end" : 		{
+			"value" : 0.0
+		}
+,
+		"pb2_buf" : 		{
+			"value" : 0.0
+		}
+,
+		"pb2_end" : 		{
+			"value" : 0.0
+		}
+,
+		"pb3_rate" : 		{
+			"value" : 1.0
+		}
+,
+		"pb3_end" : 		{
+			"value" : 0.0
+		}
+,
+		"pb3_buf" : 		{
+			"value" : 0.0
+		}
+,
+		"pb2_rate" : 		{
+			"value" : 1.0
+		}
+,
+		"vo_atten" : 		{
+			"value" : 0.25
+		}
+,
+		"pb3_atten" : 		{
+			"value" : 0.25
+		}
+,
+		"se_thresh" : 		{
+			"value" : 0.25
+		}
+,
+		"pb1_beg" : 		{
+			"value" : 0.0
+		}
+,
+		"pb1_rate" : 		{
+			"value" : 1.0
+		}
+,
+		"pb2_beg" : 		{
+			"value" : 0.0
+		}
+,
+		"pb3_beg" : 		{
+			"value" : 0.0
+		}
+,
+		"pb2_loop" : 		{
+			"value" : 1.0
+		}
+
+	}
+
+}

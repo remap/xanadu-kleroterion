@@ -182,6 +182,10 @@
 			"value" : 0.0
 		}
 ,
+		"se_rate" : 		{
+			"value" : 1.0
+		}
+,
 		"pb3_loop" : 		{
 			"value" : 0.0
 		}
@@ -218,12 +222,12 @@
 			"value" : 0.0
 		}
 ,
-		"pb2_rate" : 		{
-			"value" : 1.0
-		}
-,
 		"vo_atten" : 		{
 			"value" : 0.25
+		}
+,
+		"pb2_rate" : 		{
+			"value" : 1.0
 		}
 ,
 		"pb3_atten" : 		{

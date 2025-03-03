@@ -971,7 +971,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 1826.0, 935.0, 247.0, 23.0 ],
+									"patching_rect" : [ 1826.0, 935.0, 240.0, 23.0 ],
 									"rnbo_classname" : "param",
 									"rnbo_extra_attributes" : 									{
 										"tonormalized" : "",
@@ -989,7 +989,7 @@
 										"displayname" : ""
 									}
 ,
-									"rnbo_serial" : 46,
+									"rnbo_serial" : 47,
 									"rnbo_uniqueid" : "au_smooth_freq",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -1377,7 +1377,7 @@
 										"changesPatcherIO" : 0
 									}
 ,
-									"text" : "param au_smooth_freq 10 @min 0 @max 100",
+									"text" : "param au_smooth_freq 2 @min 0 @max 100",
 									"varname" : "au_smooth_freq"
 								}
 
@@ -1460,7 +1460,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 1818.0, 860.0, 254.0, 23.0 ],
+									"patching_rect" : [ 1818.0, 860.0, 261.0, 23.0 ],
 									"rnbo_classname" : "param",
 									"rnbo_extra_attributes" : 									{
 										"tonormalized" : "",
@@ -1478,7 +1478,7 @@
 										"displayname" : ""
 									}
 ,
-									"rnbo_serial" : 38,
+									"rnbo_serial" : 48,
 									"rnbo_uniqueid" : "au_breath_scale",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -1866,7 +1866,7 @@
 										"changesPatcherIO" : 0
 									}
 ,
-									"text" : "param au_breath_scale 1 @min 0 @max 10000",
+									"text" : "param au_breath_scale 10 @min 0 @max 10000",
 									"varname" : "au_breath_scale"
 								}
 
@@ -1896,7 +1896,7 @@
 										"displayname" : ""
 									}
 ,
-									"rnbo_serial" : 41,
+									"rnbo_serial" : 52,
 									"rnbo_uniqueid" : "au_flatness_db_hi",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -2284,7 +2284,7 @@
 										"changesPatcherIO" : 0
 									}
 ,
-									"text" : "param au_flatness_db_hi -40 @min -100 @maximum 0",
+									"text" : "param au_flatness_db_hi -15 @min -100 @maximum 0",
 									"varname" : "au_flatness_db_hi"
 								}
 
@@ -2314,7 +2314,7 @@
 										"displayname" : ""
 									}
 ,
-									"rnbo_serial" : 42,
+									"rnbo_serial" : 51,
 									"rnbo_uniqueid" : "au_flatness_db_lo",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -2702,7 +2702,7 @@
 										"changesPatcherIO" : 0
 									}
 ,
-									"text" : "param au_flatness_db_lo -40 @min -100 @max 0",
+									"text" : "param au_flatness_db_lo -15 @min -100 @max 0",
 									"varname" : "au_flatness_db_lo"
 								}
 
@@ -2732,7 +2732,7 @@
 										"displayname" : ""
 									}
 ,
-									"rnbo_serial" : 40,
+									"rnbo_serial" : 50,
 									"rnbo_uniqueid" : "au_rms_db_hi",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -3120,7 +3120,7 @@
 										"changesPatcherIO" : 0
 									}
 ,
-									"text" : "param au_rms_db_hi -50 @min -100 @max 0",
+									"text" : "param au_rms_db_hi -30 @min -100 @max 0",
 									"varname" : "au_rms_db_hi"
 								}
 
@@ -3150,7 +3150,7 @@
 										"displayname" : ""
 									}
 ,
-									"rnbo_serial" : 39,
+									"rnbo_serial" : 49,
 									"rnbo_uniqueid" : "au_rms_db_lo",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -3538,7 +3538,7 @@
 										"changesPatcherIO" : 0
 									}
 ,
-									"text" : "param au_rms_db_lo -50 @min -100 @max 0",
+									"text" : "param au_rms_db_lo -30 @min -100 @max 0",
 									"varname" : "au_rms_db_lo"
 								}
 
@@ -3719,7 +3719,7 @@
 										}
 ,
 										"classnamespace" : "rnbo",
-										"rect" : [ 59.0, 119.0, 1049.0, 771.0 ],
+										"rect" : [ 790.0, 157.0, 1049.0, 771.0 ],
 										"default_fontname" : "Lato",
 										"gridsize" : [ 15.0, 15.0 ],
 										"title" : "flatness",
@@ -43133,7 +43133,7 @@
 							}
 ,
 							"au_breath_scale" : 							{
-								"value" : 1.0
+								"value" : 10.0
 							}
 ,
 							"vo_thresh_lower" : 							{
@@ -43145,11 +43145,11 @@
 							}
 ,
 							"au_smooth_freq" : 							{
-								"value" : 10.0
+								"value" : 2.0
 							}
 ,
 							"au_rms_db_hi" : 							{
-								"value" : -50.0
+								"value" : -30.0
 							}
 ,
 							"au_atten" : 							{
@@ -43170,7 +43170,7 @@
 							}
 ,
 							"au_rms_db_lo" : 							{
-								"value" : -50.0
+								"value" : -30.0
 							}
 ,
 							"pb1_loop" : 							{
@@ -43441,7 +43441,7 @@
 										}
 ,
 										"au_breath_scale" : 										{
-											"value" : 1.0
+											"value" : 10.0
 										}
 ,
 										"vo_thresh_lower" : 										{
@@ -43453,11 +43453,11 @@
 										}
 ,
 										"au_smooth_freq" : 										{
-											"value" : 10.0
+											"value" : 2.0
 										}
 ,
 										"au_rms_db_hi" : 										{
-											"value" : -50.0
+											"value" : -30.0
 										}
 ,
 										"au_atten" : 										{
@@ -43478,7 +43478,7 @@
 										}
 ,
 										"au_rms_db_lo" : 										{
-											"value" : -50.0
+											"value" : -30.0
 										}
 ,
 										"pb1_loop" : 										{

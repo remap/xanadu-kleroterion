@@ -36642,7 +36642,7 @@
 										"meta" : ""
 									}
 ,
-									"rnbo_serial" : 38,
+									"rnbo_serial" : 39,
 									"rnbo_uniqueid" : "vo_atten",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -37030,7 +37030,7 @@
 										"changesPatcherIO" : 0
 									}
 ,
-									"text" : "param vo_atten 4 @min 0. @max 10.",
+									"text" : "param vo_atten 1 @min 0. @max 10.",
 									"varname" : "vo_atten"
 								}
 
@@ -42109,7 +42109,7 @@
 							}
 ,
 							"vo_atten" : 							{
-								"value" : 4.0
+								"value" : 1.0
 							}
 ,
 							"pb3_atten" : 							{
@@ -42401,7 +42401,7 @@
 										}
 ,
 										"vo_atten" : 										{
-											"value" : 4.0
+											"value" : 1.0
 										}
 ,
 										"pb3_atten" : 										{

@@ -2,7 +2,7 @@
 	"name" : "Xanadu RNBO",
 	"version" : 1,
 	"creationdate" : 3817114062,
-	"modificationdate" : 3823829022,
+	"modificationdate" : 3823908882,
 	"viewrect" : [ 52.0, 144.0, 298.0, 501.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -34,11 +34,6 @@
 		}
 ,
 		"media" : 		{
-			"breathtest.mp3" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
 			"alive.mp3" : 			{
 				"kind" : "audiofile",
 				"local" : 1
@@ -209,6 +204,11 @@
 				"local" : 1
 			}
 ,
+			"breathtest.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
 			"aulos.mp3" : 			{
 				"kind" : "audiofile",
 				"local" : 1
@@ -247,6 +247,16 @@
 			"vocoder.mp3" : 			{
 				"kind" : "audiofile",
 				"local" : 1
+			}
+,
+			"all_around_world.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
 			}
 
 		}

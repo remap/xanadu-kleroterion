@@ -2,7 +2,7 @@
 	"name" : "Xanadu RNBO",
 	"version" : 1,
 	"creationdate" : 3817114062,
-	"modificationdate" : 3823908882,
+	"modificationdate" : 3823914744,
 	"viewrect" : [ 52.0, 144.0, 298.0, 501.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -34,6 +34,16 @@
 		}
 ,
 		"media" : 		{
+			"aulos_v2.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
+			}
+,
 			"alive.mp3" : 			{
 				"kind" : "audiofile",
 				"local" : 1

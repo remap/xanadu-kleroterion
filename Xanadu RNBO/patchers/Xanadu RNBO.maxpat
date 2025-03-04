@@ -974,6 +974,306 @@
 						"title" : "xanadu",
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-475",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
+									"patching_rect" : [ 1463.736335277557373, 1483.516556024551392, 181.0, 23.0 ],
+									"rnbo_classname" : "buffer~",
+									"rnbo_extra_attributes" : 									{
+										"fill" : "",
+										"samplerate" : 0.0,
+										"type" : ""
+									}
+,
+									"rnbo_serial" : 38,
+									"rnbo_uniqueid" : "buffer~_obj-475",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"info" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Bang to report buffer information.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "bang"
+											}
+,
+											"sizeout" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Size in Samples",
+												"defaultarg" : 2,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"chanout" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Number of Channels",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"srout" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Sample rate",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"size" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Size in Samples. Take care when setting, allocation might block audio processing.",
+												"defaultarg" : 2,
+												"isalias" : 0,
+												"aliases" : [ "samples" ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"samples" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Size in Samples. Take care when setting, allocation might block audio processing.",
+												"defaultarg" : 2,
+												"isalias" : 1,
+												"aliasOf" : "size",
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"sizems" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Size in Milliseconds. Take care when setting, allocation might block audio processing.",
+												"isalias" : 0,
+												"aliases" : [ "ms" ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"ms" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Size in Milliseconds. Take care when setting, allocation might block audio processing.",
+												"isalias" : 1,
+												"aliasOf" : "sizems",
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"clear" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Clear the contents of the buffer",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "bang"
+											}
+,
+											"normalize" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Find Maximum and normalize to the value given.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0.995"
+											}
+,
+											"channels" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Change channel count. Take care when setting, allocation might block audio processing.",
+												"defaultarg" : 3,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "1"
+											}
+,
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Name of the data buffer",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+,
+											"file" : 											{
+												"attrOrProp" : 2,
+												"digest" : "File name/path or URL to load into buffer.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"url" : 											{
+												"attrOrProp" : 2,
+												"digest" : "The name of an audio file to load",
+												"isalias" : 1,
+												"aliasOf" : "file",
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"type" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Type of Data (float32, float64)",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"samplerate" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Sample rate",
+												"defaultarg" : 4,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"fill" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Fill expression, this could be a value, or a simple function like sin(x), where x will run from 0 to 1 to fill the buffer.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"external" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Await data from the outside world.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "bool",
+												"doNotShowInMaxInspector" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "info",
+												"type" : "bang",
+												"digest" : "Bang to report buffer information.",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "sizeout",
+												"type" : "number",
+												"digest" : "Size in Samples",
+												"defaultarg" : 2,
+												"docked" : 0
+											}
+, 											{
+												"name" : "chanout",
+												"type" : "number",
+												"digest" : "Number of Channels",
+												"docked" : 0
+											}
+, 											{
+												"name" : "srout",
+												"type" : "number",
+												"digest" : "Sample rate",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "buffer~",
+										"aliasOf" : "data",
+										"classname" : "buffer~",
+										"operator" : 0,
+										"versionId" : 51756089,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "buffer~ au_0 @file aulos_v2.mp3"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-473",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
@@ -1734,9 +2034,9 @@
 									"outlettype" : [ "signal" ],
 									"patching_rect" : [ 1961.0, 1193.197807192802429, 47.0, 23.0 ],
 									"rnbo_classname" : "*~",
-									"rnbo_serial" : 36,
+									"rnbo_serial" : 37,
 									"rnbo_uniqueid" : "*~_obj-457",
-									"text" : "*~ 0.03"
+									"text" : "*~ 0.04"
 								}
 
 							}
@@ -1833,7 +2133,7 @@
 									"outlettype" : [ "signal", "signal" ],
 									"patching_rect" : [ 2051.109894514083862, 1027.263733148574829, 51.0, 23.0 ],
 									"rnbo_classname" : "tri~",
-									"rnbo_serial" : 4,
+									"rnbo_serial" : 6,
 									"rnbo_uniqueid" : "tri~_obj-463",
 									"text" : "tri~ 200"
 								}
@@ -34606,7 +34906,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "signal" ],
-									"patching_rect" : [ 1311.0, 1285.0, 136.0, 23.0 ],
+									"patching_rect" : [ 1316.0, 1279.120941638946533, 136.0, 23.0 ],
 									"rnbo_classname" : "groove~",
 									"rnbo_extra_attributes" : 									{
 										"synctype" : "relative",
@@ -40789,6 +41089,22 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-161", 1 ],
+									"order" : 3,
+									"source" : [ "obj-207", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-165", 1 ],
+									"order" : 2,
+									"source" : [ "obj-207", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-450", 1 ],
 									"order" : 0,
 									"source" : [ "obj-207", 0 ]
@@ -42393,22 +42709,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-186", 0 ],
-									"order" : 1,
-									"source" : [ "obj-466", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-187", 0 ],
-									"order" : 0,
-									"source" : [ "obj-466", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-343", 0 ],
 									"source" : [ "obj-47", 0 ]
 								}
@@ -42540,6 +42840,20 @@
 								"patchline" : 								{
 									"destination" : [ "obj-43", 0 ],
 									"source" : [ "obj-68", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-161", 0 ],
+									"source" : [ "obj-70", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-165", 0 ],
+									"source" : [ "obj-70", 1 ]
 								}
 
 							}
@@ -44070,6 +44384,13 @@
 			}
 , 			{
 				"name" : "all_around_world.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "aulos_v2.mp3",
 				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
 				"patcherrelativepath" : "../audio",
 				"type" : "Mp3",

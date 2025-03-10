@@ -294,7 +294,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 443.0, 277.0, 67.605634689331055, 21.0 ],
+									"patching_rect" : [ 756.0, 350.0, 67.605634689331055, 21.0 ],
 									"text" : "<-- trigger"
 								}
 
@@ -402,7 +402,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 408.0, 275.0, 24.0, 24.0 ],
+									"patching_rect" : [ 721.0, 348.0, 24.0, 24.0 ],
 									"rnbo_classname" : "button",
 									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "button_obj-446"
@@ -417,7 +417,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 476.0, 369.0, 24.0, 24.0 ],
+									"patching_rect" : [ 789.0, 442.0, 24.0, 24.0 ],
 									"rnbo_classname" : "button",
 									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "button_obj-447"
@@ -431,7 +431,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 443.0, 306.0, 23.0, 23.0 ],
+									"patching_rect" : [ 756.0, 379.0, 23.0, 23.0 ],
 									"rnbo_classname" : "t",
 									"rnbo_extra_attributes" : 									{
 										"triggers" : ""
@@ -505,7 +505,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 443.0, 336.0, 61.0, 23.0 ],
+									"patching_rect" : [ 756.0, 409.0, 61.0, 23.0 ],
 									"rnbo_classname" : "delay",
 									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "delay_obj-449",
@@ -535,7 +535,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 443.0, 370.0, 29.5, 23.0 ],
+									"patching_rect" : [ 756.0, 443.0, 29.5, 23.0 ],
 									"rnbo_classname" : "message",
 									"rnbo_extra_attributes" : 									{
 										"text" : "0"
@@ -554,7 +554,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 408.0, 370.0, 29.5, 23.0 ],
+									"patching_rect" : [ 721.0, 443.0, 29.5, 23.0 ],
 									"rnbo_classname" : "message",
 									"rnbo_extra_attributes" : 									{
 										"text" : "1"
@@ -573,7 +573,7 @@
 									"numinlets" : 5,
 									"numoutlets" : 2,
 									"outlettype" : [ "signal", "" ],
-									"patching_rect" : [ 409.0, 403.0, 122.0, 23.0 ],
+									"patching_rect" : [ 722.0, 476.0, 122.0, 23.0 ],
 									"rnbo_classname" : "adsr~",
 									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "adsr~_obj-453",
@@ -630,7 +630,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 260.0, 241.0, 19.014084100723267, 80.985916554927826 ],
+									"patching_rect" : [ 260.0, 234.0, 19.014084100723267, 80.985916554927826 ],
 									"rnbo_classname" : "slider",
 									"rnbo_extra_attributes" : 									{
 										"floatoutput" : 1,
@@ -756,9 +756,9 @@
 									"outlettype" : [ "signal", "signal" ],
 									"patching_rect" : [ 351.0, 170.0, 51.0, 23.0 ],
 									"rnbo_classname" : "tri~",
-									"rnbo_serial" : 1,
+									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "tri~_obj-463",
-									"text" : "tri~ 200"
+									"text" : "tri~ 400"
 								}
 
 							}

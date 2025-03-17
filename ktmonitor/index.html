@@ -1,0 +1,514 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Xanadu Kleroterion Monitor</title>
+
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/6.3.0/css/tabulator_midnight.min.css" rel="stylesheet">
+  <!--  <link href="https://unpkg.com/tabulator-tables@5.4.3/dist/css/tabulator_midnight.min.css" rel="stylesheet">-->
+
+  <!-- For device detection
+  https://docs.uaparser.dev/
+   https://github.com/faisalman/ua-parser-js?tab=readme-ov-file
+   -->
+  <script src="https://cdn.jsdelivr.net/npm/ua-parser-js@2.0.2/dist/ua-parser.pack.min.js"></script>
+
+
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+</head>
+
+<body>
+<h1>Kleroterion Monitor</h1>
+<div>
+  <button class="env-btn" id="dev-btn">Dev</button>
+  <button class="env-btn" id="stage-btn">Stage</button>
+  <button class="env-btn" id="production-btn">Production</button>
+  <button id="clear-btn">Clear Current Database</button>
+  <span id="status">Wait...</span>
+</div>
+<div>&nbsp;</div>
+<div id="datatable" style="width: 100%; overflow-x: auto;"></div>
+
+<script type="module">
+  // Firebase v9 imports
+  import {initializeApp} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+  import {getAuth, signInAnonymously} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+  import {
+    getDatabase,
+    ref,
+    onValue,
+    remove,
+    get,
+    push
+  } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+  var FIREBASE_ROOT = "";
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+  let envParam = params.env; // "some_value"
+  console.log("environment", envParam)
+  var DEFAULT_ENVIRONMENT = (envParam === null) ? "dev" : envParam;
+  window.dbReady = false;
+  window.dbFirstLoad = false;
+  // -- Firebase Config --
+  var db = null;
+  fetch('xanadu-secret-firebase.json')
+    .then(response => response.json())
+    .then(config => {
+      window.firebaseConfig = config;
+      console.log(config);
+      // Initialize Firebase
+      const firebaseApp = initializeApp(window.firebaseConfig);
+      db = getDatabase(firebaseApp);
+
+      // Sign in anonymously
+      const auth = getAuth(firebaseApp);
+      signInAnonymously(auth)
+        .then(() => {
+          console.log("Signed in anonymously");
+          window.dbReady = true;
+        })
+        .catch(error => console.error("Error signing in anonymously:", error));
+    })
+    .catch(error => console.error('Error loading config:', error));
+
+
+  // --- Tabulator Formatters ---
+  const colorSwatchFormatter = cell => `<div style="width:20px;height:20px;background:${cell.getValue()};border:1px solid #000;margin:auto;"></div>`;
+
+  const BooleanFormatter = cell => {
+    const value = cell.getValue();
+    //const lastSeenSecs = cell.getRow().getData().age;
+    return `<div style="width:100%;height:100%;background:${value ? "green" : "grey"};color:white;text-align:center;">${value ? "True" : "False"}</div>`;
+  };
+
+  const EnabledFormatter = (cell, params) => {
+    const value = cell.getValue();
+    const row = cell.getRow().getData()
+    const lastSeenSecs = ((Date.now() - new Date(row.lastSeenUTC).getTime()) / 1000);
+    const connected = row.connected;
+    let bg = "grey"
+    if (connected && (lastSeenSecs < 6)) {
+      bg = value ? "green" : "goldenrod";
+    }
+    return `<div style="width:100%;height:100%;background:${bg};color:white;text-align:center;">${value ? params.true_string : params.false_string}</div>`;
+  };
+
+  function connectedFormatter(cell) {
+    const value = cell.getValue();
+    const rowData = cell.getRow().getData();
+    const bgColor = rowData.connected ? "green" : "grey";
+    return `<div style="width:100%;height:100%;background:${bgColor};color:white;text-align:center;">${value}</div>`;
+  }
+
+  function secondsSinceLastSeenFormatter(cell) {
+    const value = cell.getValue();
+    if (!value) return "";
+    const seconds = Math.max(((Date.now() - new Date(value).getTime()) / 1000), 0).toFixed(2);
+    //const seconds = parseFloat(lastSeenDiff);
+    if (isNaN(seconds)) return "";
+    let color = "";
+    if (seconds < 3) color = "green";
+    else if (seconds < 6) color = "goldenrod";
+    else if (seconds < 10) color = "#CC5500";
+    else color = "darkred";
+    //cell.getElement().style.backgroundColor = color;
+    //return seconds.toFixed(2);
+    return `<div style="width:100%;height:100%;background:${color};color:white;text-align:right;">${seconds}</div>`;
+
+  }
+
+  const oscFormatter = cell => {
+    const value = cell.getValue() || "";
+    if (value.len > 40) {
+      return value.substring(0, 40) + "..."
+    } else return value;
+  };
+
+  function browserFormatter(cell) {
+    const uaStr = cell.getValue();
+    if (!uaStr) return "";
+    const parser = new UAParser(uaStr);
+    const {name = "", major = ""} = parser.getBrowser();
+    return `${name} ${major}`.trim();
+  }
+
+  function osFormatter(cell) {
+    const uaStr = cell.getValue();
+    if (!uaStr) return "";
+    const parser = new UAParser(uaStr);
+    const {name = "", version = ""} = parser.getOS();
+    return `${name} ${version}`.trim();
+  }
+
+
+  function jsonXYZFormatter(cell) {
+    const value = cell.getValue();
+    if (!value) return "";
+    let data;
+    if (typeof value === "string") {
+      try {
+        data = JSON.parse(value);
+      } catch (e) {
+        return "";
+      }
+    } else if (typeof value === "object") {
+      data = value;
+    }
+    if (!data || data.x === undefined || data.y === undefined || data.z === undefined) return "";
+    return `${Number(data.x).toFixed(2)}, ${Number(data.y).toFixed(2)}, ${Number(data.z).toFixed(2)}`;
+  }
+
+  function actionFormatter(cell) {
+    const key = cell.getRow().getData().id;
+    return `
+        <img src="img/musical_note.png" style="cursor:pointer;width:20px;height:20px;background-color:${window.audioToggle[key] ? '#009' : 'transparent'}" onclick="audioNotify('${key}')" />
+        <img src="img/flashbulb.png" style="cursor:pointer;width:20px;height:20px;background-color:${window.visualToggle[key] ? '#009' : 'transparent'}" onclick="visualNotify('${key}')" />
+        <img src="img/flute.png" style="cursor:pointer;width:20px;height:20px;background-color:${window.aulosToggle[key] ? '#009' : 'transparent'}" onclick="aulos('${key}')" />
+        <img src="img/tambourine.png" style="cursor:pointer;width:20px;height:20px;background-color:${window.seistronToggle[key] ? '#009' : 'transparent'}" onclick="sesitron('${key}')" />
+        <img src="img/vocoder.png" style="cursor:pointer;width:20px;height:20px;background-color:${window.vocoderToggle[key] ? '#009' : 'transparent'}" onclick="vocoder('${key}')" />
+      `;
+  }
+
+
+  function localTimeFormatter(cell) {
+    const val = cell.getValue();
+    if (!val) return "";
+    const d = new Date(val);
+    if (isNaN(d.getTime())) return "";
+    const pad = num => String(num).padStart(2, '0');
+    const hh = pad(d.getHours());
+    const mm = pad(d.getMinutes());
+    const ss = pad(d.getSeconds());
+    const ssFrac = pad(Math.round(d.getMilliseconds() / 10));
+    const month = pad(d.getMonth() + 1);
+    const day = pad(d.getDate());
+    const year = pad(d.getFullYear() % 100);
+    return `${hh}:${mm}:${ss}.${ssFrac} ${month}-${day}-${year}`;
+  }
+
+  // --- Initialize the Tabulator Table ---
+  const table = new Tabulator("#datatable", {
+    layout: "fitColumns",
+    groupBy: "group",
+    initialSort: [
+      {column: "id", dir: "asc"}
+    ],
+    columns: [
+      {title: "Actions", formatter: actionFormatter, hozAlign: "center", headerHozAlign: "center", width: 150},
+      {title: "ID (Connected)", field: "id", formatter: connectedFormatter, headerHozAlign: "center", width: 175},
+      {
+        title: "Audio",
+        field: "rnbo",
+        formatter: EnabledFormatter,
+        formatterParams: {true_string: "Audio On", false_string: "Disabled"},
+        headerHozAlign: "center",
+        width: 100
+      },
+      {
+        title: "Tapped",
+        field: "tapped",
+        formatter: EnabledFormatter,
+        formatterParams: {true_string: "Tapped", false_string: "Not Tapped"},
+        headerHozAlign: "center",
+        width: 100
+      },
+      {
+        title: "Tracking",
+        field: "reality",
+        formatter: EnabledFormatter,
+        formatterParams: {true_string: "Tracking", false_string: "No Tracking"},
+        headerHozAlign: "center",
+        width: 100
+      },
+      {
+        title: "Visible",
+        field: "document_visible",
+        formatter: EnabledFormatter,
+        formatterParams: {true_string: "App Visible", false_string: "App Hidden"},
+        headerHozAlign: "center",
+        width: 100
+      },
+      {
+        title: "Data",
+        headerHozAlign: "center",
+        field: "lastSeenUTC",
+        hozAlign: "right",
+        width: 100,
+        formatter: secondsSinceLastSeenFormatter,
+        sorter: "number"
+      },
+      {title: "OS", field: "userAgent", formatter: osFormatter, width: 120},
+      {title: "Browser", field: "userAgent", formatter: browserFormatter, width: 150},
+
+      // {title: "Connected", field: "connected", formatter: BooleanFormatter},
+      {title: "Paint", field: "paint_color", formatter: colorSwatchFormatter, headerHozAlign: "center", width: 75},
+      {title: "Touch", field: "paint_touch", formatter: BooleanFormatter, headerHozAlign: "center", width: 100},
+      {
+        title: "Position",
+        field: "position",
+        formatter: jsonXYZFormatter,
+        hozAlign: "center",
+        headerHozAlign: "center",
+        width: 150
+      },
+      // {title: "Position Recentered", field: "position_recentered"},
+      {
+        title: "Rotation",
+        field: "rotation",
+        formatter: jsonXYZFormatter,
+        hozAlign: "center",
+        headerHozAlign: "center",
+        width: 150
+      },
+      {title: "Group", field: "group", width: 100, headerHozAlign: "center", hozAlign: "center"},
+      {title: "Last OSC Received", field: "lastOSC", formatter: oscFormatter},
+      {
+        title: "Last Data Seen", field: "lastSeenUTC", width: 200, formatter: localTimeFormatter, sorter: "datetime",
+        sorterParams: {
+          format: "iso",
+          invalidAction: "bottom"
+        }
+      },
+      // {title: "Last Seen Unix", field: "lastSeenUnix"},
+    ]
+  });
+
+
+  // --- Throttle Table Updates (once per second) ---
+  let lastData = [];
+  let lastUpdate = 0;
+  const ONE_SECOND = 1000;
+  let peers = {};
+  var unsubscribe = '';
+
+  function setupHandler() {
+    console.log("setupHandler()");
+    if (unsubscribe !== '') {
+      unsubscribe();
+      table.clearData();
+      setStatus("Wait...")
+      setTimeout(subscribe, 400);
+    } else {
+      subscribe();
+    }
+    //setTimeout(fetchOnce, 250);
+  }
+
+  const MUSES = ["melpomene",
+    "calliope",
+    "thalia",
+    "euterpe",
+    "terpsicore",
+    "erato",
+    "kira"]
+
+
+  function subscribe() {
+    console.log("subscribe");
+    unsubscribe = onValue(ref(db, FIREBASE_ROOT), processSnapshot, error => console.error("Firebase error:", error));
+    setStatus("");
+  }
+
+  function fetchOnce() {
+    console.log("get");
+    get(ref(db, FIREBASE_ROOT)).then((snapshot) => processSnapshot).catch(error => console.error("Firebase error:", error));
+  }
+
+  window.processSnapshot = (snapshot) => {
+    const data = [];
+    if (snapshot !== null) {
+      const peersnap = snapshot.child("peers")
+      let peers = null
+      if (peersnap.exists()) {
+        peers = peersnap.val()
+      }
+      snapshot.forEach(child => {
+        const key = child.key;
+        if (key === "peers" || key === "default" || MUSES.includes(key)) {
+          return;
+        }
+        const val = child.val();
+        const peer = (peers && peers[key]) || {};
+        const cam = (val["camera-publisher"] && val["camera-publisher"].camera) || {};
+
+        // Calculate seconds since last seen
+        // const lastSeenDiff = peer.lastSeenUTC
+        //   ? ((Date.now() - new Date(peer.lastSeenUTC).getTime()) / 1000).toFixed(2)
+        //   : "";
+
+        data.push({
+          id: key,
+          lastSeenUTC: peer.lastSeenUTC,
+          lastSeenUnix: peer.lastSeenUnix,
+          // lastSeenDiff,
+          userAgent: peer.userAgent,
+          connected: cam.connected,
+          group: cam.group,
+          paint_color: cam.paint_color,
+          paint_touch: cam.paint_touch,
+          position: cam.position ? JSON.stringify(cam.position) : "",
+          position_recentered: cam.position_recentered ? JSON.stringify(cam.position_recentered) : "",
+          rotation: cam.rotation ? JSON.stringify(cam.rotation) : "",
+          rnbo: peer.rnbo_ready,
+          tapped: peer.tapped,
+          reality: peer.reality,
+          document_visible: peer.document_visible,
+          lastOSC: peer.last_osc,
+        });
+      });
+      // Cache the latest data
+      lastData = data;
+    }
+
+    // Throttle to once per second
+    const now = Date.now();
+    if (now - lastUpdate >= ONE_SECOND) {
+      table.replaceData(lastData);
+      lastUpdate = now;
+    }
+  }
+
+
+  // BUTTON HANDLERS
+
+  // Delete key on button click
+  function clearCurrentDatabase() {
+    remove(ref(db, FIREBASE_ROOT))
+      .then(() => {
+        console.log('Root deleted successfully.');
+      })
+      .catch(error => {
+        console.error('Error deleting Root:', error);
+      });
+  }
+
+  function updateEnvironment(env, btn) {
+    console.log("updateEnvironment", env, btn)
+    if (env === "dev") {
+      FIREBASE_ROOT = "dev-xanadu/kl";
+    } else if (env === "stage") {
+      FIREBASE_ROOT = "stage-xanadu/kl";
+    } else if (env === "production") {
+      FIREBASE_ROOT = "xanadu/kl";
+    }
+    console.log("Environment set to:", FIREBASE_ROOT);
+    // Remove active class from all buttons
+    document.querySelectorAll("button.env-btn").forEach(b => b.classList.remove("active"));
+    // Highlight the clicked button
+    btn.classList.add("active");
+
+    setupHandler();
+
+  }
+
+  // Startup set up here:
+  //
+  window.addEventListener("DOMContentLoaded", () => {
+    console.log("DOM Loaded")
+    document.getElementById('dev-btn').addEventListener('click', function () {
+      updateEnvironment('dev', this);
+    });
+    document.getElementById('stage-btn').addEventListener('click', function () {
+      updateEnvironment('stage', this);
+    });
+    document.getElementById('production-btn').addEventListener('click', function () {
+      updateEnvironment('production', this);
+    });
+    document.getElementById('clear-btn').addEventListener('click', function () {
+      clearCurrentDatabase();
+    });
+
+    // Ensure we redraw the table every second for lost calcs.
+    setInterval(() => {
+      if (window.dbReady && !window.dbFirstLoad) {
+        updateEnvironment(DEFAULT_ENVIRONMENT, document.getElementById(`${DEFAULT_ENVIRONMENT}-btn`))
+        window.dbFirstLoad = true;
+        setStatus("");
+      }
+      processSnapshot(null);
+    }, 1000);
+
+
+  });
+
+  function setStatus(s) {
+    document.getElementById('status').innerHTML = s;
+  }
+
+
+  // -- Global Handlers --
+  window.visualToggle = {};
+  window.visualNotify = (key) => {
+    if (!(key in window.visualToggle)) {
+      window.visualToggle[key] = false;
+    }       // TODO: This will leak (a little bit of) memory over time as the map grows.
+    window.visualToggle[key] = !window.visualToggle[key];
+    console.log("Visual notify", window.visualToggle[key], key);
+    sendMessage(key, "middlemessage/property", ["attribute-to-html", `${window.visualToggle[key] ? 'value:<img width="100%" src="https://static.8thwall.app/assets/onj-6cv246a09h.jpg">' : "value:"}`]);
+  };
+  window.audioToggle = {};
+  window.audioNotify = (key) => {
+    if (!(key in window.audioToggle)) {
+      window.audioToggle[key] = false;
+    }
+    window.audioToggle[key] = !window.audioToggle[key];
+    console.log("Audio notify", window.audioToggle[key], key);
+    sendMessage(key, "rnbo/event", ["message", "pb1_play", `${window.audioToggle[key] ? "1" : "0"}`]);
+  };
+  window.aulosToggle = {};
+  window.aulos = (key) => {
+    if (!(key in window.aulosToggle)) {
+      window.aulosToggle[key] = false;
+    }
+    window.aulosToggle[key] = !window.aulosToggle[key];
+    console.log("Aulos", window.aulosToggle[key], key);
+    sendMessage(key, "rnbo/event", ["message", "au_on", `${window.aulosToggle[key] ? "1" : "0"}`]);
+  };
+  window.seistronToggle = {};
+  window.sesitron = (key) => {
+    if (!(key in window.seistronToggle)) {
+      window.seistronToggle[key] = false;
+    }
+    window.seistronToggle[key] = !window.seistronToggle[key];
+    console.log("Sesitron", window.seistronToggle[key], key);
+    sendMessage(key, "rnbo/event", ["message", "se_on", `${window.seistronToggle[key] ? "1" : "0"}`]);
+    ;
+  };
+  window.vocoderToggle = {};
+  window.vocoder = (key) => {
+    if (!(key in window.vocoderToggle)) {
+      window.vocoderToggle[key] = false;
+    }
+    window.vocoderToggle[key] = !window.vocoderToggle[key];
+    console.log("Vocoder", window.vocoderToggle[key], key);
+    sendMessage(key, "rnbo/event", ["message", "vo_on", `${window.vocoderToggle[key] ? "1" : "0"}`]);
+  };
+
+
+  window.sendMessage = (id, path, msg) => {
+    const outpath = "/" + [FIREBASE_ROOT, id, "entity", path].join("/");
+    console.log("FB out: " + outpath + " " + msg);
+    push(ref(db, outpath), msg);
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  flex-direction: column;
+
+
+  background: #000; 
+  color: white; 
+  font-family: arial, helvetica, sans-serif; 
+}
+h1 {
+	color: yellow;
+	font-size: 24pt; 
+}
+	h2 {
+	color: white;
+	font-size: 16pt; 
+}
+ol {
+	font-size: 14pt;
+	line-height: 150%;  
+	}
+img {
+  max-width: 512px;  /* Adjust as needed */
+  height: auto;
+  border: 2px solid #ccc;
+}
+a {
+    color: white;
+}
+li {
+    line-height:2;
+}

@@ -41,7 +41,13 @@
   <button class="env-btn" id="stage-btn">Stage</button>
   <button class="env-btn" id="production-btn">Production</button>
   <button id="clear-btn">Clear Current Database</button>
-  <span id="status">Wait...</span>
+  <span id="status" style="color:yellow">Wait... </span>
+  Trigger all devices:
+  <img src="img/musical_note.png" style="cursor:pointer;width:30px;height:30px;" onclick="audioNotify('default')" />
+  <img src="img/flashbulb.png" style="cursor:pointer;width:30px;height:30px;" onclick="visualNotify('default')" />
+  <img src="img/flute.png" style="cursor:pointer;width:30px;height:30px;" onclick="aulos('default')" />
+  <img src="img/tambourine.png" style="cursor:pointer;width:30px;height:30px;" onclick="sesitron('default')" />
+  <img src="img/vocoder.png" style="cursor:pointer;width:30px;height:30px;" onclick="vocoder('default')" />
 </div>
 <div>&nbsp;</div>
 <div id="datatable" style="width: 100%; overflow-x: auto;"></div>
@@ -381,8 +387,11 @@
 
     // Throttle to once per second
     const now = Date.now();
+    const scrollPos = window.pageYOffset;
     if (now - lastUpdate >= ONE_SECOND) {
-      table.replaceData(lastData);
+      table.replaceData(lastData).then(() => {
+        window.scrollTo(0, scrollPos);
+      });
       lastUpdate = now;
     }
   }

@@ -2,7 +2,7 @@
 	"name" : "Xanadu RNBO",
 	"version" : 1,
 	"creationdate" : 3817114062,
-	"modificationdate" : 3823914744,
+	"modificationdate" : 3827446716,
 	"viewrect" : [ 52.0, 144.0, 298.0, 501.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -34,7 +34,22 @@
 		}
 ,
 		"media" : 		{
+			"alive.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
+			"all_around_world.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
 			"aulos_v2.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1
+			}
+,
+			"Aulos__v1_4-9-25_trimmed.mp3" : 			{
 				"kind" : "audiofile",
 				"local" : 1,
 				"singleton" : 				{
@@ -44,14 +59,104 @@
 
 			}
 ,
-			"alive.mp3" : 			{
+			"Aulos_v3_4-2-25_normalized.mp3" : 			{
 				"kind" : "audiofile",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
 			}
 ,
-			"chariots.mp3" : 			{
+			"BecomingMuseon_Notif_Playful_v1_trimmed_normalized.mp3" : 			{
 				"kind" : "audiofile",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
+			}
+,
+			"ImAlive_Notif_AudienceSort_v2.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
+			}
+,
+			"MountOlympus_Notif_Failure_v1_normalized.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
+			}
+,
+			"MountOlympus_Notif_LightningSlice_v2_normalize.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
+			}
+,
+			"MountOlympus_Notif_Reward_v1.5_normalize.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
+			}
+,
+			"Onboarding_Notif_Success_v3_normalize.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
+			}
+,
+			"PowerDown_Notif_Doom_v3_normalize.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
+			}
+,
+			"Seistron_v2_no_delay_4-1-25_trimmed.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
+			}
+,
+			"StageisCanvas_Notif_EvilSisters_v1_trimmed.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
 			}
 ,
 			"chucke.mp3" : 			{
@@ -214,52 +319,102 @@
 				"local" : 1
 			}
 ,
-			"breathtest.mp3" : 			{
+			"chariots.mp3" : 			{
 				"kind" : "audiofile",
 				"local" : 1
+			}
+,
+			"breathtest.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
 			}
 ,
 			"aulos.mp3" : 			{
 				"kind" : "audiofile",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
 			}
 ,
 			"aulos_0.mp3" : 			{
 				"kind" : "audiofile",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
 			}
 ,
 			"midnight.mp3" : 			{
 				"kind" : "audiofile",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
 			}
 ,
 			"se-beads.mp3" : 			{
 				"kind" : "audiofile",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
+			}
+,
+			"Xanadu_Onboarding_Disco_Demo_4.9.25_normalized.mp3" : 			{
+				"kind" : "audiofile",
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
 			}
 ,
 			"seistron-short.mp3" : 			{
 				"kind" : "audiofile",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
 			}
 ,
 			"seistron.mp3" : 			{
 				"kind" : "audiofile",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
 			}
 ,
 			"sfx-knock.mp3" : 			{
 				"kind" : "audiofile",
-				"local" : 1
+				"local" : 1,
+				"singleton" : 				{
+					"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+					"projectrelativepath" : "./audio"
+				}
+
 			}
 ,
 			"vocoder.mp3" : 			{
-				"kind" : "audiofile",
-				"local" : 1
-			}
-,
-			"all_around_world.mp3" : 			{
 				"kind" : "audiofile",
 				"local" : 1,
 				"singleton" : 				{

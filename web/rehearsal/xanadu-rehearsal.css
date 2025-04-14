@@ -19,11 +19,13 @@ ol {
 	font-size: 14pt;
 	line-height: 150%;  
 	}
+/* 
 img {
-  max-width: 512px;  /* Adjust as needed */
+  max-width: 512px; 
   height: auto;
   border: 2px solid #ccc;
 }
+ */
 a {
     color: white;
 }

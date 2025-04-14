@@ -2,7 +2,7 @@ import json
 import csv
 
 # Path to the input JSON file
-json_file_path = 'demo_deps.json'  # Update with your file path
+json_file_path = 'dependencies.json'  # Update with your file path
 
 # Path to the output CSV file
 csv_file_path = 'deps.csv'  # Update with your desired file path

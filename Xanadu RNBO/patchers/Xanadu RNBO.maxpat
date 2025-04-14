@@ -25468,7 +25468,7 @@
 										"syncmode" : "phase"
 									}
 ,
-									"rnbo_serial" : 9,
+									"rnbo_serial" : 11,
 									"rnbo_uniqueid" : "groove~_obj-70",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -25708,7 +25708,7 @@
 										"changesPatcherIO" : 0
 									}
 ,
-									"text" : "groove~ au_0 2 @loop 1 @buffername au_0 au_1"
+									"text" : "groove~ au_0 2 @loop 1 @buffername au_0 au_1 au_2"
 								}
 
 							}
@@ -33284,10 +33284,220 @@
 		}
 ,
 		"dependency_cache" : [ 			{
+				"name" : "Aulos__v1_4-9-25_trimmed.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "Aulos_v3_4-2-25_normalized.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "BecomingMuseon_Notif_Playful_v1_trimmed_normalized.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "ImAlive_Notif_AudienceSort_v2.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "MountOlympus_Notif_Failure_v1_normalized.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "MountOlympus_Notif_LightningSlice_v2_normalize.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "MountOlympus_Notif_Reward_v1.5_normalize.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "Onboarding_Notif_Success_v3_normalize.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "PowerDown_Notif_Doom_v3_normalize.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "Seistron_v2_no_delay_4-1-25_trimmed.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "StageisCanvas_Notif_EvilSisters_v1_trimmed.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "Xanadu_Onboarding_Disco_Demo_4.9.25_normalized.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "alive.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "aulos_v2.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "chucke.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "lush.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "northsea.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "osc_20241214.maxsnap",
 				"bootpath" : "~/Dropbox/Mac (5)/Documents/Max 9/Snapshots",
 				"patcherrelativepath" : "../../../../../../Mac (5)/Documents/Max 9/Snapshots",
 				"type" : "mx@s",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "se-maraca.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "se-strings.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "sfx-beads.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "sfx-ice.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "sfx-kartala.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "sfx-pipe.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "sfx-shaker.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "simpson.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "strangers.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "sultans.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "survive.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "suspended.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "whenever.mp3",
+				"bootpath" : "~/Dropbox/eutamias-dev/xanadu/kt/xanadu-kleroterion/Xanadu RNBO/audio",
+				"patcherrelativepath" : "../audio",
+				"type" : "Mp3",
 				"implicit" : 1
 			}
  ],
